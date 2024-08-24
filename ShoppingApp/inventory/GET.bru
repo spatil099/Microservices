@@ -1,0 +1,16 @@
+meta {
+  name: GET
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:9000/api/inventory?skuCode=iphone_15&quantity=10
+  body: none
+  auth: none
+}
+
+query {
+  skuCode: iphone_15
+  quantity: 10
+}
