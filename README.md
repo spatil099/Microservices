@@ -2,6 +2,29 @@
 A simple shopping application with microservices architecture using Springboot 2, Java 21 and Maven build script.
 It is yet a work in progress (Tests are pending)
 
+## Dependencies Used :
+1. lombok : Reduce boilerplate code
+2. spring web : Restful API implementations
+3. Spring data mongoDB : non seq database to store data in json documents meaning json can be varied and datastructure can also be varied over time
+(@Data (ProductRequest.class & ProductResponse.class) to mark it as a data for DTO and @Docment to create a document based on this class in MongoDB)
+(add spring.data.mongodb.uri=mongodb://root:password@localhost:27017/product-service?authSource=admin in application.properties)
+5. testcontainers (testcontainers.org): java lib that supports for integration tests ( message servers, selenium UI tests, available as containers in docker as well and many other modules)
+ @TestContainers annotation
+   (add junit integration framework as well)
+6. SpringData JPA (mySQL) : persist in SQL using spring data and hibernate
+ @Table() annotation to create Table with name
+@Entity indicating it's a JPA entiry which maps to @Table
+@GeneratedValue(Strategy=GenerationType.AUTO) to generate the id and GenerationType.IDNETITY to increment it for evry product
+   (add junit integration framework as well)
+8. MySQL JDBC Driver:
+spring.datasource.url=jdbc:mysql://localhost:3316/order_service
+spring.datasource.username=root
+spring.datasource.password=mysql
+spring.jpa.hibernate.ddl-auto=none
+server.port=8081
+9. 
+   
+
 # All the details of individual services are explained below
 ## ShoppingApp 
 This folder contains bruno collections used for testing
