@@ -22,8 +22,6 @@ spring.datasource.username=root
 spring.datasource.password=mysql
 spring.jpa.hibernate.ddl-auto=none
 server.port=8081
-9. 
-   
 
 # All the details of individual services are explained below
 ## ShoppingApp 
